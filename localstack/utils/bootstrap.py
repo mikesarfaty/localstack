@@ -297,7 +297,7 @@ def start_infra_in_docker():
     docker_cmd = ('%s run %s%s%s%s%s' +
         '--rm --privileged ' +
         '--name %s ' +
-        '-p 8080:8080 %s %s' +
+        '-p %s %s' +
         '-v "%s:/tmp/localstack" -v "%s:%s" ' +
         '-e DOCKER_HOST="unix://%s" ' +
         '-e HOST_TMP_FOLDER="%s" "%s" %s') % (
